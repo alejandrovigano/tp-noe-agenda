@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Linkeamos los archivos del framework-->
+    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.css">
+    <script src="jqm/jquery-1.12.3.min.js"></script>
+    <script src="jqm/jquery.mobile-1.4.5.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+web">
+    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.css"/>
+    <link rel="stylesheet" href="style/font-awesome.css">
+
+    <link rel="stylesheet" href="style/estilos.css">
+
+    <title>Document</title>
+</head>
+<body>
+<div data-role="page" id="page1">
+    <div data-role="header">
+        <a id="borrarTodo" href="#"
+           data-icon="minus"
+           data-iconpos="notext"
+           class="ui-btn-left">volver</a>
+
+        <h1>AGENDAX</h1>
+
+        <a href="#popnoe"
+           data-rel="popup"
+           data-icon="info"
+           data-iconpos="notext"
+           data-position-to="window"
+           data-transition="pop" data-theme="a"
+           class="ui-btn-rigth">volver</a>
+    </div>
+
+
+    <div role="main" class="ui-content">
+
+        PARCIAL
+        <div id="grilla_parcial">
+
+        </div>
+
+
+        CLASE
+        <div id="grilla_clase">
+
+        </div>
+
+    </div>
+
+    <div id="popnoe" data-role="popup" data-overlay-theme="b" data-history="false" data-corners="false" class="ui-content">
+
+        <!-- Botón de cierre -->
+
+        <a href="#" data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Cerrar popup</a>
+        <div data-role="header" class="ventanas" style="border-radius: 30px;">
+            <h3 style="margin: auto">NOE</h3>
+        </div>
+        <h5>DISEÑADORA MULTIMEDIAL</h5>
+        <p>Amante de la fotografía y de pintar con acuarelas! Apasionada por el diseño ux ui.
+            <br>
+            <br>
+            <b>Materia: </b>Desarrollo de Apps
+            <br>
+            <b>Profesor: </b>Omar Toyos
+            <br>
+            <b>DM5ATN · 2020</b>
+        </p>
+    </div>
+
+    <div id="botonFlotante">
+        <a href="#agregar">
+            <i class="fa fa-plus-circle">
+
+            </i></a>
+    </div>
+</div>
+
+<!----------------------------------------------FORMULARIO AGREGAR evento-->
+<div data-role="page" id="agregar">
+    <div data-role="header">
+        <h1>NUEVO</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <form>
+            <input type="text" id="materia" placeholder="Materia" required/>
+            <input type="date" id="fecha" placeholder="Fecha" required/>
+            <!------------------DESPLEGABLE-->
+            <select name="tipoDeTarea" id="tipoDeTarea">
+                <option value="Clase">Clase</option>
+                <option value="Parcial">Parcial</option>
+            </select>
+
+            <input type="text" id="profesor" placeholder="Profesor" required/>
+
+            <fieldset data-role="controlgroup" data-type="horizontal" id="condicionEntregaForm">
+                        
+                <legend>Condición de entrega:</legend>
+                         <input type="radio" name="condEntrega" id="individual" value="on" checked="checked">
+                         <label for="individual">Individual</label>
+                         <input type="radio" name="condEntrega" id="grupal" value="off">
+                         <label for="grupal">Grupal</label>
+            </fieldset>
+
+            <a href="#page1" data-role="button"
+               data-inline="true">Cancelar</a>
+            <input type="submit" value="Agregar"
+                   data-theme="b" data-inline="true"/>
+        </form>
+    </div>
+
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+#text{
+    position: absolute;
+}
+#botonFlotante{
+    background-color: #4162f6;
+    color: white;
+    font-weight: 800;
+    display: inline-block;
+    border-radius: 50%;
+    position: sticky;
+    font-size: 3.5em;
+    text-align: center;
+    left: 70%;
+    top: 88%;
+    padding: 0em .3em; 
+}
+
+i{
+   position: absolute;
+   color: #4162f6; 
+    
+}
+
+li{
+    list-style: none;
+}
+
+
+.ui-page-theme-a a:visited, html .ui-bar-a a:visited, html .ui-body-a a:visited, html body .ui-group-theme-a a:visited{
+    color: white;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+    text-shadow: 0 /*{a-page-shadow-x}*/ 0px /*{a-page-shadow-y}*/ 0 /*{a-page-shadow-radius}*/ 	#f3f3f3 /*{a-page-shadow-color}*/
+}
+
+#grilla_clase .condEntrega{
+    display: none;
+}
+
+.tipoTarea {
+    display: none;
+}
+
+.evento {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.evento-hecho{
+    text-decoration:line-through;
+}
+
+/**
+CUANDO EL EVENTO ESTA TILDADO
+ */
+.evento.evento-hecho .realizado .fa-check{
+    display: inline;
+}
+.evento.evento-hecho .realizado .fa-circle-thin{
+    display: none;
+}
+
+
+/**
+CUANDO EL EVENTO NO ESTA TILDADO
+ */
+.evento.evento-pendiente .realizado .fa-check{
+    display: none;
+}
+.evento.evento-pendiente .realizado .fa-circle-thin{
+    display: inline;
+}
+
+/**
+CUANDO EL EVENTO ESTA TILDADO Y HAGO HOVER
+ */
+.evento.evento-hecho .realizado:hover .fa-check{
+    display: none;
+}
+
+.evento.evento-hecho .realizado:hover .fa-circle-thin{
+    display: inline;
+}
+
+/**
+CUANDO EL EVENTO NO ESTA TILDADO Y HAGO HOVER
+ */
+
+.evento.evento-pendiente .realizado:hover .fa-check{
+    display: inline;
+}
+
+.evento.evento-pendiente .realizado:hover .fa-circle-thin{
+    display: none;
+}
